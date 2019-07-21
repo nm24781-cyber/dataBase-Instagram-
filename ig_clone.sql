@@ -40,5 +40,5 @@ id INT AUTO_INCREMENT PRIMARY KEY NOT NULL
  ,created_at TIMESTAMP DEFAULT NOW()
  ,FOREIGN KEY (follower_id) REFERENCES users(id)
  ,FOREIGN KEY (followee_id) REFERENCES users(id)
- ,PRIMARY KEY(follwer_id,followee_id)
+ ,PRIMARY KEY(follower_id,followee_id)
  );
