@@ -34,3 +34,11 @@ id INT AUTO_INCREMENT PRIMARY KEY NOT NULL
  ,PRIMARY KEY(user_id,photo_id)
  );
  
+ CREATE TABLE follows(
+ follower_id INT NOT NULL
+ ,followee_id INT NOT NULL
+ ,created_at TIMESTAMP DEFAULT NOW()
+ ,FOREIGN KEY (follower_id) REFERENCES users(id)
+ ,FOREIGN KEY (followee_id) REFERENCES users(id)
+ ,PRIMARY KEY(follwer_id,followee_id)
+ );
